@@ -1,2 +1,2 @@
 # Graphics-Project
-Video game
+Utilizing the attained knowledge on graphics to build a meaninful video game
