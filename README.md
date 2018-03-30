@@ -16,4 +16,6 @@ Things that need to be done:
 
 - Characters( should be relevant to the scene of course)
 
+-Platforms (making sure to add the triggers that will set the flame tiles on fire and killing the user as well as triggering a frost type of particle system to kill the user). 
+
 - Audio 
