@@ -2,11 +2,17 @@
 Utilizing the attained knowledge on graphics to build a meaninful video game.
 
 Current Status:
+
 Main scene(currently a blank scene)
+
 Space Scene (in progress)
+
 Empty Scene
+
 Empty Scene
+
 Platforms created for use (in Sprites Folder)
+
 
 Things that need to be done:
 
@@ -16,6 +22,6 @@ Things that need to be done:
 
 - Characters( should be relevant to the scene of course)
 
--Platforms (making sure to add the triggers that will set the flame tiles on fire and killing the user as well as triggering a frost type of particle system to kill the user). 
+- Platforms (making sure to add the triggers that will set the flame tiles on fire and killing the user as well as triggering a frost type of particle system to kill the user). 
 
 - Audio 
