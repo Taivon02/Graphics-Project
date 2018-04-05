@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Fire
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -46,4 +48,10 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 514389747
+    locked: 0
+  - name: Cover
+    uniqueID: 1986805689
+    locked: 0
+  - name: Frost
+    uniqueID: 133778355
     locked: 0

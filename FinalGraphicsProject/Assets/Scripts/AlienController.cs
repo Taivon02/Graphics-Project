@@ -1,22 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AlienController : MonoBehaviour {
 
-    [SerializeField] float speed = 5.0f;
+    [SerializeField] public float speed = 5.0f;
     bool facingRight = true;
     private bool jump;
     Animator anim;
-
+    
     bool grounded = false;
     [SerializeField] bool airControl = false;
     public Transform groundCheck;
     float groundRadius = 0.2f;
     [SerializeField] LayerMask whatIsGround;
-    [SerializeField] float jumpForce = 700f;
+    [SerializeField] float jumpForce = 400f;
 
-
+    bool doubleJump = false;
 
     // Use this for initialization
     void Awake() {
@@ -31,44 +32,47 @@ public class AlienController : MonoBehaviour {
         anim.SetBool("Ground", grounded);
         anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
 
-        Vector3 pos = transform.position;
-       
-       
+        if (grounded)
+        {
+            doubleJump = false;
+        }
+
+
 
     }
-    public void Move(float move, bool jump)
+    public void Move(float moveCharacter, bool jump, bool canMove)
     {
-        if (grounded || airControl)
+        if (canMove == true)
         {
-            float moveCharacter = Input.GetAxis("Horizontal");
-            anim.SetFloat("speed", Mathf.Abs(moveCharacter));
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveCharacter * speed, GetComponent<Rigidbody2D>().velocity.y);
-            if (moveCharacter > 0 && !facingRight)
+           
+            if (grounded || airControl)
             {
-                Flip();
+                moveCharacter = Input.GetAxis("Horizontal");
+                anim.SetFloat("speed", Mathf.Abs(moveCharacter));
+                GetComponent<Rigidbody2D>().velocity = new Vector2(moveCharacter * speed, GetComponent<Rigidbody2D>().velocity.y);
+                if (moveCharacter > 0 && !facingRight)
+                {
+                    Flip();
+                }
+                else if (moveCharacter < 0 && facingRight)
+                    Flip();
             }
-            else if (moveCharacter < 0 && facingRight)
-                Flip();
+            if ((grounded || !doubleJump) && jump)
+            {
+                anim.SetBool("Ground", false);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+                if (!grounded)
+                    doubleJump = true;
+            }
+
         }
-        if(grounded && jump)
-        {
-            anim.SetBool("Ground", false);
-            GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0);
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
-        }
-    
-      
+        
+           StartCoroutine("Wait");
+         
+
     }
-   /* private void Update()
-    {
-        if(grounded && Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetBool("Ground", false);
-            
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
-            
-        }
-    }*/
+
     void Flip()
     {
         facingRight = !facingRight;
@@ -76,4 +80,13 @@ public class AlienController : MonoBehaviour {
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-}
+
+   
+
+    }
+
+
+
+
+
+
