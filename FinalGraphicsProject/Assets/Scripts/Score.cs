@@ -4,20 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Score : MonoBehaviour {
     int playerScore = 0; 
-    int highScore = 0; 
+    int highScore = 0;
+    public Transform player;
     Animator anim;
    public Camera cam;
-  //  Vector2 pos = new Vector2(20, 10);
-   // Vector2 size = new Vector2(200, 16);
+
+    //  Vector2 pos = new Vector2(20, 10);
+    // Vector2 size = new Vector2(200, 16);
+  
     public Text highScoreText;
     public Text scoreText;
+    private int points = 1;
+    private float playerStartPoint;
 
     private void Start()
     {
-        if(cam == null)
-        {
-            cam = Camera.main;
-        }
+       
         playerScore = 0;
         scoreText.text = "Score:\n\t" + playerScore.ToString();
         highScore = PlayerPrefs.GetInt("High Score");
@@ -26,6 +28,8 @@ public class Score : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
+
+        playerScore += (int)Time.deltaTime;
         
         scoreText.text = "Score:\n\t" + playerScore.ToString();
         if (playerScore > highScore)
@@ -37,9 +41,11 @@ public class Score : MonoBehaviour {
         }
        
     }
-    private void FixedUpdate()
+    private void LateUpdate()
     {
-        playerScore += (int)Camera.current.transform.position.x;
+        playerStartPoint = player.transform.position.x;
+          //  playerScore += (int)points * 100;
+        
     }
 
     public void scoreIncrease(int amount)

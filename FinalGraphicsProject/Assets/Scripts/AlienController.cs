@@ -21,7 +21,7 @@ public class AlienController : MonoBehaviour {
 
     // Use this for initialization
     void Awake() {
-        groundCheck = transform.Find("GroundCheck");
+       // groundCheck = transform.Find("GroundCheck");
         anim = GetComponent<Animator>();
     }
 
@@ -67,8 +67,6 @@ public class AlienController : MonoBehaviour {
             }
 
         }
-        
-           StartCoroutine("Wait");
          
 
     }
