@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class GameOver : MonoBehaviour {
 
     int score = 0;
+    public Text text;
 	// Use this for initialization
 	void Start () {
         score = PlayerPrefs.GetInt("Score");
+        text.text = "Score:\t" + score.ToString(); 
 	}
-    private void OnGUI()
+    
+
+    public void restartClick()
     {
-        GUI.Label(new Rect(Screen.width / 2 - 40, 50, 80, 30), "GAME OVER");
-        GUI.Label(new Rect(Screen.width / 2 - 40, 300, 80, 30), "Score: " + score);
-        if(GUI.Button(new Rect(Screen.width / 2 - 30, 350, 60, 30), "Retry?"))
-        {
-            SceneManager.LoadScene("Space");
-        }
+        SceneManager.LoadScene("Space");
+    }
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour {
     public GameObject[] gobj;
-    int i;
+    int i = 0;
     // Use this for initialization
     void Start () {
        // StartCoroutine("Wait");

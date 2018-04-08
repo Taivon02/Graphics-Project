@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 95935362005723046}
   - component: {fileID: 114369171427240036}
   - component: {fileID: 114048467944519246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dark Gray
   m_TagString: Player
   m_Icon: {fileID: 0}

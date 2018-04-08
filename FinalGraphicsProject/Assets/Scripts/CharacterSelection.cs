@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEditor;
+
 
 public class CharacterSelection : MonoBehaviour {
-
+    Rect windowRect;
     private GameObject[] characterList;
+
+    public GameObject text;
+    public GameObject other;
+    public GameObject other2;
+
     private int index;
 
     public void ToggleLeft()
@@ -34,19 +42,32 @@ public class CharacterSelection : MonoBehaviour {
     public void Confirmbtn()
     {
         PlayerPrefs.SetInt("CharacterSelected", index);
-      //  switch (this.gameObject.name)
+        //  switch (this.gameObject.name)
         //{
-          //  case "Space":
-                SceneManager.LoadScene("Space");
-            //    break;
-
-        //}
+        //  case "Space":
+        if (text.activeSelf == false && other.activeSelf == false && other2.activeSelf == false) { 
+            // OnGUI();
+            EditorUtility.DisplayDialog("Error", "Please Choose a Platform", "OK");
+        }
+        else if(text.activeSelf == true) {
+        
+            SceneManager.LoadScene("Space");
+        }
+        else if(other.activeSelf == true)
+        {
+            //SceneManager.LoadScene("Jungle");
+        }
+        else if(other2.activeSelf == true)
+        {
+            //SceneManager.LoadScene("Kitchen");
+        }
+                
        
     }
-	// Use this for initialization
-	void Start () {
+   
+    // Use this for initialization
+    void Start () {
         index = PlayerPrefs.GetInt("CharacterSelected");
-
 
 
         characterList = new GameObject[transform.childCount];
@@ -64,6 +85,7 @@ public class CharacterSelection : MonoBehaviour {
         {
             characterList[index].SetActive(true);
         }
+       
     }
 	
 	// Update is called once per frame

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InfiniteBackground : MonoBehaviour {
-    public float speed = 0.5f;
+    private float speed = .1f;
    // AlienController alien;
 	// Use this for initialization
 	void Start () {
@@ -12,7 +12,7 @@ public class InfiniteBackground : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector2 offset = new Vector2(Time.time * speed, 0);
+        Vector2 offset = new Vector2(Time.time*speed, 0);
 
         GetComponent<Renderer>().material.mainTextureOffset = offset;
 	}

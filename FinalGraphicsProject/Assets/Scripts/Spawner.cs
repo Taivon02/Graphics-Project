@@ -6,8 +6,8 @@ public class Spawner : MonoBehaviour {
 
     public GameObject[] gobj;
    
-   // UserController user;
-  //  AlienController alien;
+  
+        
    // Animator animator;
     public float minSpawn = 1.0f;
     public float maxSpawn = 2.0f;
@@ -39,6 +39,7 @@ public class Spawner : MonoBehaviour {
        
              Instantiate(gobj[Random.Range(0, gobj.Length)], transform.position, Quaternion.identity);
           Invoke("Spawn", Random.Range(2.0f, 3.0f));
+        
        
         
     }
