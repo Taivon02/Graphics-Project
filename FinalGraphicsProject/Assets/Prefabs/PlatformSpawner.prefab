@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4663424587784180}
   - component: {fileID: 33019577308746130}
-  - component: {fileID: 64293381164535066}
   - component: {fileID: 23391500827241718}
   - component: {fileID: 114478772873279482}
+  - component: {fileID: 61560207973346312}
   m_Layer: 0
   m_Name: PlatformSpawner
   m_TagString: Untagged
@@ -36,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505837900065304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.93, y: 1.75, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.37, y: -1.92, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,20 +84,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505837900065304}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64293381164535066
-MeshCollider:
+--- !u!61 &61560207973346312
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505837900065304}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114478772873279482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,11 +121,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gobj:
-  - {fileID: 1220404251909246, guid: cd4603e3590dda6459e20cbdbd04fcfb, type: 2}
-  - {fileID: 1526722097035426, guid: dcf2d7fdd2043ec44b4dc323fa387519, type: 2}
-  - {fileID: 1831658510455818, guid: 1324684de71a7de4a9332566e6cf7a50, type: 2}
-  - {fileID: 1069815538529196, guid: 85b5f2e6272b6d24fa1ddeb64d8ef34f, type: 2}
-  - {fileID: 1472255381036328, guid: 78ca6e49176cd964a82e59a98d4b0ab3, type: 2}
-  - {fileID: 1034709008832598, guid: 8e6b87865981d15489f0a4f6cefbd12a, type: 2}
+  - {fileID: 1914498260162890, guid: 792403dba0cbc462f8021fe0d040bf3b, type: 2}
+  - {fileID: 1418709720590696, guid: f4b93918c695a44218ccfa979d72dbb8, type: 2}
+  - {fileID: 1622161981210116, guid: 78a903208de874ee18039183fb599f26, type: 2}
+  - {fileID: 1749673793538124, guid: 16e6c8ac239da4ac79b32f0bd88a102b, type: 2}
   minSpawn: 1
   maxSpawn: 2
+  chances: 0.1
+  normalGround:
+  - {fileID: 1914498260162890, guid: 792403dba0cbc462f8021fe0d040bf3b, type: 2}
+  - {fileID: 1622161981210116, guid: 78a903208de874ee18039183fb599f26, type: 2}
+  - {fileID: 1749673793538124, guid: 16e6c8ac239da4ac79b32f0bd88a102b, type: 2}
+  specialGround:
+  - {fileID: 1418709720590696, guid: f4b93918c695a44218ccfa979d72dbb8, type: 2}
