@@ -3,13 +3,15 @@ Utilizing the attained knowledge on graphics to build a meaninful video game.
 
 Current Status:
 
-Main scene(currently a blank scene)
+Main scene(done)
+
+Character Selection(done)
 
 Space Scene (in progress)
 
-Empty Scene
+Jungle Scene (in progress)
 
-Empty Scene
+Kitchen Scene (in progress)
 
 Platforms created for use (in Sprites Folder)
 
