@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4663424587784180}
   - component: {fileID: 33019577308746130}
-  - component: {fileID: 64293381164535066}
   - component: {fileID: 23391500827241718}
   - component: {fileID: 114478772873279482}
   m_Layer: 0
@@ -36,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505837900065304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.93, y: 1.75, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.6, y: -1.2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,20 +83,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1505837900065304}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64293381164535066
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1505837900065304}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114478772873279482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,11 +95,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gobj:
-  - {fileID: 1220404251909246, guid: cd4603e3590dda6459e20cbdbd04fcfb, type: 2}
-  - {fileID: 1526722097035426, guid: dcf2d7fdd2043ec44b4dc323fa387519, type: 2}
-  - {fileID: 1831658510455818, guid: 1324684de71a7de4a9332566e6cf7a50, type: 2}
-  - {fileID: 1069815538529196, guid: 85b5f2e6272b6d24fa1ddeb64d8ef34f, type: 2}
-  - {fileID: 1472255381036328, guid: 78ca6e49176cd964a82e59a98d4b0ab3, type: 2}
-  - {fileID: 1034709008832598, guid: 8e6b87865981d15489f0a4f6cefbd12a, type: 2}
+  - {fileID: 1078682920930166, guid: 984f967bc76944e438971130b2f8b076, type: 2}
+  - {fileID: 1849856740111894, guid: 85fd24a719a2055489a429c0e421bd82, type: 2}
+  - {fileID: 1178356896191906, guid: 33168adae52567845b01cbb9ff46e586, type: 2}
+  - {fileID: 1013462673467026, guid: 23f8231514bec4c49b8ffbbf0a99e358, type: 2}
   minSpawn: 1
   maxSpawn: 2
+  chances: 0.01
+  normalGround:
+  - {fileID: 1178356896191906, guid: 33168adae52567845b01cbb9ff46e586, type: 2}
+  - {fileID: 1849856740111894, guid: 85fd24a719a2055489a429c0e421bd82, type: 2}
+  - {fileID: 1078682920930166, guid: 984f967bc76944e438971130b2f8b076, type: 2}
+  specialGround:
+  - {fileID: 1013462673467026, guid: 23f8231514bec4c49b8ffbbf0a99e358, type: 2}

@@ -8,7 +8,6 @@ public class ActivateParticle : MonoBehaviour {
     public ParticleSystem _psystem;
     GameObject alien;
     GameObject anim;
-    Rigidbody2D rg;
     private int index;
    void Start()
     {

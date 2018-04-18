@@ -12,9 +12,6 @@ public class MainMenu : MonoBehaviour {
             case "Start":
                 SceneManager.LoadScene("Selection");
                 break;
-            case "Credits":
-                SceneManager.LoadScene("Credits");
-                break;
             case "Quit":
                 Application.Quit();
                 break;

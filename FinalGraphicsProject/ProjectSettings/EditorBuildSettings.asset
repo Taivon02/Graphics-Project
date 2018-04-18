@@ -5,15 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Scenes/Main.unity
-    guid: cb1fe42a2b9c5fc40aef5498b946fedd
-  - enabled: 1
-    path: Assets/_Scenes/Space.unity
-    guid: bed48c36fd0525a4e815dbef2588bf92
-  - enabled: 1
-    path: Assets/_Scenes/GameOver.unity
-    guid: 723f7a0072d60c04bb6ea877d5e1af40
   - enabled: 1
     path: Assets/_Scenes/Menu.unity
     guid: d3fa5d5f1ac5b5f428d5843743d1d7ea
@@ -21,5 +12,14 @@ EditorBuildSettings:
     path: Assets/_Scenes/Selection.unity
     guid: db762cd28a5c2ab45b95d0aec20972f0
   - enabled: 1
-    path: Assets/_Scenes/Credits.unity
-    guid: d1db8fc01ba97f747a6bc8b855482eae
+    path: Assets/_Scenes/Space.unity
+    guid: bed48c36fd0525a4e815dbef2588bf92
+  - enabled: 1
+    path: Assets/_Scenes/Fantasy.unity
+    guid: 792d9a672643c3d4cb0385506c024171
+  - enabled: 1
+    path: Assets/_Scenes/Outside.unity
+    guid: 3cf29b1234b20f548bb3b777d23a7310
+  - enabled: 1
+    path: Assets/_Scenes/GameOver.unity
+    guid: 723f7a0072d60c04bb6ea877d5e1af40

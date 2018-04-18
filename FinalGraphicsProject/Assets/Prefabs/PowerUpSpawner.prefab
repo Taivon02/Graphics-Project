@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4974202552749134}
   - component: {fileID: 33495865165921618}
   - component: {fileID: 23135758516149546}
-  - component: {fileID: 114343636421475094}
+  - component: {fileID: 114125025608650298}
   m_Layer: 0
   m_Name: PowerUpSpawner
   m_TagString: Untagged
@@ -35,9 +35,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891754439646044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.424067, y: 2.0531526, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: -2.4, z: 10}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,7 +83,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891754439646044}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114343636421475094
+--- !u!114 &114125025608650298
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,13 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1891754439646044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd93520992bece44a99f212aa65276a4, type: 3}
+  m_Script: {fileID: 11500000, guid: de044ca1631a2b44986791722bdb821c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gobj:
-  - {fileID: 1507475528040242, guid: d06f392b71448214f9f25a2aa0e3b898, type: 2}
-  minSpawn: 2
-  maxSpawn: 5
-  chances: 0.5
-  normalGround: []
-  specialGround: []
+  - {fileID: 1615140690786530, guid: 18fc42b0c7ea8754aa5065cc90e39f59, type: 2}
+  minSpawn: 5
+  maxSpawn: 6

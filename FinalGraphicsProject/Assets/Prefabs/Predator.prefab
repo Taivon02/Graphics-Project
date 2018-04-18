@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 95460994088718458}
   - component: {fileID: 114793206506464994}
   - component: {fileID: 114155968352513834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Predator
   m_TagString: Player
   m_Icon: {fileID: 0}

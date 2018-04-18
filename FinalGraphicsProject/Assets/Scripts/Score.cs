@@ -3,43 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class Score : MonoBehaviour {
-    int playerScore = 0; 
+    int playerScore;
     int highScore = 0;
+    
+    
     public Transform player;
     Slider energyBar;
     Animator anim;
 
-    //  Vector2 pos = new Vector2(20, 10);
-    // Vector2 size = new Vector2(200, 16);
-  
     public Text highScoreText;
     public Text scoreText;
     
-
-    public float distance;
-   
-
-
-    void Awake()
-    {
-        distance = Vector3.Distance(player.position, transform.position);
-
-    }
-
-    void score()
-    {
-        distance = Vector3.Distance(player.position, transform.position);
-       playerScore += (int)distance;
-      
-    }
 
 
     private void Start()
     {
        
         playerScore = 0;
-        transform.position = player.position;
-        distance = 0;
         scoreText.text = "Score:\n\t" + playerScore.ToString();
         highScore = PlayerPrefs.GetInt("High Score");
         highScoreText.text = "High Score:\n\t" + highScore.ToString();
@@ -47,7 +27,7 @@ public class Score : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        score();
+        
         scoreText.text = "Score:\n\t" + playerScore.ToString();
         if (playerScore > highScore)
         {
@@ -75,6 +55,10 @@ public class Score : MonoBehaviour {
     {
         PlayerPrefs.SetInt("Score", (int)playerScore);
         
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2.0f);
     }
     /*private void OnGUI()
     {

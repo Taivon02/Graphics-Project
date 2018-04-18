@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEditor;
+
 
 
 public class CharacterSelection : MonoBehaviour {
@@ -13,7 +13,7 @@ public class CharacterSelection : MonoBehaviour {
     public GameObject text;
     public GameObject other;
     public GameObject other2;
-
+    public GameObject panel;
     private int index;
 
     public void ToggleLeft()
@@ -42,24 +42,23 @@ public class CharacterSelection : MonoBehaviour {
     public void Confirmbtn()
     {
         PlayerPrefs.SetInt("CharacterSelected", index);
-        //  switch (this.gameObject.name)
-        //{
-        //  case "Space":
-        if (text.activeSelf == false && other.activeSelf == false && other2.activeSelf == false) { 
-            // OnGUI();
-            EditorUtility.DisplayDialog("Error", "Please Choose a Platform", "OK");
+       
+        if (text.activeSelf == false && other.activeSelf == false && other2.activeSelf == false) {
+
+            panel.SetActive(true);
         }
+        //Loading the scenes based on the active text above each platform selection
         else if(text.activeSelf == true) {
         
             SceneManager.LoadScene("Space");
         }
         else if(other.activeSelf == true)
         {
-            //SceneManager.LoadScene("Jungle");
+            SceneManager.LoadScene("Outside");
         }
         else if(other2.activeSelf == true)
         {
-            //SceneManager.LoadScene("Kitchen");
+            SceneManager.LoadScene("Fantasy");
         }
                 
        
@@ -68,7 +67,6 @@ public class CharacterSelection : MonoBehaviour {
     // Use this for initialization
     void Start () {
         index = PlayerPrefs.GetInt("CharacterSelected");
-
 
         characterList = new GameObject[transform.childCount];
 
@@ -92,4 +90,8 @@ public class CharacterSelection : MonoBehaviour {
 	void Update () {
 		
 	}
+    public void HidePanel()
+    {
+        panel.SetActive(false);
+    }
 }

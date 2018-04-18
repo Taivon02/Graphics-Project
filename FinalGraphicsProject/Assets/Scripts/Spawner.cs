@@ -16,10 +16,11 @@ public class Spawner : MonoBehaviour {
     public GameObject[] specialGround;
     float platformWidth;
     float oldSpawnPoint;
+
 	// Use this for initialization
 	void Start () {
         Spawn();
-        
+       
 	}
 	
 	// Update is called once per frame
@@ -37,8 +38,14 @@ public class Spawner : MonoBehaviour {
             gobj = specialGround;
         }
        
-             Instantiate(gobj[Random.Range(0, gobj.Length)], transform.position, Quaternion.identity);
-          Invoke("Spawn", Random.Range(2.0f, 3.0f));
+            Instantiate(gobj[Random.Range(0, gobj.Length)], transform.position, Quaternion.identity);
+            Invoke("Spawn", Random.Range(2.0f, 3.0f));
+       
+         //   Instantiate(gobj[0], transform.position, Quaternion.identity);
+           // Invoke("Spawn", 1.0f);
+        
+
+       
         
        
         
