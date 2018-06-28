@@ -1,5 +1,5 @@
 # Graphics-Project
-Utilizing the attained knowledge on graphics to build a meaninful video game.
+Utilizing the attained knowledge on graphics to build a meaningful video game.
 
 Current Status:
 
@@ -15,5 +15,5 @@ Fantasy Scene (done)
 
 Game Over Scene (done)
 
-Added Audio
+Added Audio (done)
 
